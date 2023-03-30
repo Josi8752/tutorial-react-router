@@ -7,6 +7,7 @@ import Invoice from './routes/Invoices/Invoice';
 import Invoices from './routes/Invoices';
 import NotFound from './routes/NotFound';
 import InvoicesIndex from './routes/Invoices/InvoicesIndex';
+import IndexinitialPage from './routes/IndexInitialPage';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
@@ -23,6 +24,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </Route>
         <Route path="*" element={<NotFound />}
         />
+        <Route path="/" element={<IndexinitialPage />}>
+        </Route>
       </Route>
     </Routes>
 

@@ -1,0 +1,14 @@
+:root {
+    --color-font-primary: #000;
+}
+
+main {
+    padding: "1rem"
+}
+
+main p {
+
+    color: var(--color-font-primary);
+    font-size: 24px;
+    text-transform: uppercase;
+}
