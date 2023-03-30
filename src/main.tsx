@@ -6,6 +6,7 @@ import Expenses from './routes/Expenses';
 import Invoice from './routes/Invoices/Invoice';
 import Invoices from './routes/Invoices';
 import NotFound from './routes/NotFound';
+import InvoicesIndex from './routes/Invoices/InvoicesIndex';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
@@ -14,14 +15,10 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Route path="/" element={<App />}>
         <Route path="expenses" element={<Expenses />} />
         <Route path="invoices" element={<Invoices />}>
-        <Route
-        index
-        element={
-          <main style={{ padding: "1rem" }}>
-            <p>Select an invoice</p>
-          </main>
-        }
-      />
+          <Route
+            index
+            element={<InvoicesIndex />}
+          />
           <Route path=":invoiceId" element={<Invoice />} />
         </Route>
         <Route path="*" element={<NotFound />}
