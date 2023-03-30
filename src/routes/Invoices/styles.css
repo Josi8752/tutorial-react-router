@@ -1,0 +1,20 @@
+:root{
+    --color-font-primary: #ff0000;
+    --color-font-secundary: #0000ff;
+}
+
+.dblock{
+    display: block;
+    margin: 1rem 0;
+
+}
+
+.nav-red{
+    color: red;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-blue{
+    color: blue;
+}
