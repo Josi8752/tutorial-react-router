@@ -11,4 +11,5 @@ main p {
     color: var(--color-font-primary);
     font-size: 24px;
     text-transform: uppercase;
+    font-weight: 700;
 }
