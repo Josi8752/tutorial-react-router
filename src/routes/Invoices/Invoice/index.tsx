@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom";
-import { getInvoice, getInvoices } from "../../../Data/data";
+import { useNavigate, useParams } from "react-router-dom";
+import { getInvoice, deleteInvoice } from "../../../Data/data";
 
 export default function Invoice() {
   const params = useParams();
   const invoice = getInvoice(Number(params.invoiceId));
+  const navigate = useNavigate();
   return (
     <>{
       invoice &&
@@ -13,6 +14,16 @@ export default function Invoice() {
           {invoice.name}: {invoice.number}
         </p>
         <p>Due Date: {invoice.due}</p>
+        <p>
+          <button
+            onClick={() => {
+              deleteInvoice(invoice.number);
+              navigate("/invoices" + location.search);
+            }}
+          >
+            Delete
+          </button>
+        </p>
       </main>
     }</>
 
